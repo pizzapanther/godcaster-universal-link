@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Godcaster</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script>
+      var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+      };
+
+      if ( isMobile.Android() ) {
+        document.location.href = "https://play.google.com/store/apps/details?id=fm.godcaster.mobile";
+      } else if(isMobile.iOS()) {
+        document.location.href = "https://apps.apple.com/us/app/godcaster/id6744736606";
+      }
+    </script>
+    <style>
+      body {
+        color: #ed8481;
+        background-color: #0e0041;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      main {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+        <h1>Godcaster Downloads</h1>
+        <div>
+          <a href="https://apps.apple.com/us/app/godcaster/id6744736606" style="margin-right: 20px;">
+            <img src="apple.svg" alt="Apple App Store" style="height: 52px;">
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=fm.godcaster.mobile">
+            <img src="google.svg" alt="Google Play Store" style="height: 52px;">
+          </a>
+        </div>
+    </main>
+  </body>
+</html>
